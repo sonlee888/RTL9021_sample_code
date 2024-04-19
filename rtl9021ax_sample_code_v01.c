@@ -159,13 +159,6 @@ s16 RTL9021Ax_Initial_Configuration() {
 	}while (mdio_data != 0x0000);
 	// End //
 
-
-	mdio_write(0, 0x8000);	// PHY soft-reset
- 
-	while (mdio_data != 0x2140){	// Check soft-reset complete
-			mdio_data = mdio_read(0);
-	}
-
 	return SUCCESS;
 }
 
