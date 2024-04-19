@@ -148,6 +148,7 @@ s16 RTL9021Ax_Initial_Configuration() {
 	mdio_write(27, 0xB820);
 	mdio_write(28, 0x0000);
 
+	timer = 2000; // set a 2ms timer
 	do
 	{	
 		mdio_write(27, 0xB800);
@@ -303,7 +304,8 @@ s16 RTL9021Ax_Initial_Configuration_Check(){
 	mdio_write(28, 0x0000);
 	mdio_write(27, 0xB820);
 	mdio_write(28, 0x0000);
-
+	
+	timer = 2000; // set a 2ms timer
 	do
 	{	
 		mdio_write(27, 0xB800);
